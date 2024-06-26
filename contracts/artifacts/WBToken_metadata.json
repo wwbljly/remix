@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/WBToken.sol": "WBToken"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/WBToken.sol": {
+			"keccak256": "0x21a868ebbfd607ca7925f90e23110e0136792558de2afbc6f89a25f2b5efef9a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bec117fbc4b3fb14fbbad84cf1122336b4ef425a9bf745f270584b33bf45232d",
+				"dweb:/ipfs/QmR5CVJbTpcdeZ9mHMZjRwuvmDgBZkFLWYE45kEwp8iUvS"
+			]
+		}
+	},
+	"version": 1
+}

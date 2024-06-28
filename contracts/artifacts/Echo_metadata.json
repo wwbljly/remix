@@ -1,10 +1,15 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.22+commit.4fc1097e"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
 			{
 				"anonymous": false,
 				"inputs": [
@@ -56,6 +61,54 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowancesOfWBC",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "approveWBC",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string[2]",
 						"name": "attr",
 						"type": "string[2]"
@@ -97,6 +150,19 @@
 				"name": "finish",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAccount",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -263,6 +329,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "getWBCBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_activityId",
 						"type": "uint256"
@@ -271,6 +356,85 @@
 				"name": "pay",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFromWBC",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferWBC",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "wbcContract",
+				"outputs": [
+					{
+						"internalType": "contract ITRC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "wbcContractAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -293,7 +457,7 @@
 		"compilationTarget": {
 			"contracts/Echo.sol": "Echo"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -306,11 +470,11 @@
 	},
 	"sources": {
 		"contracts/Echo.sol": {
-			"keccak256": "0xa314ef700dc0c23383a17e9d3d6864fd61b63f5c5dc1011d3409f4120a38265b",
+			"keccak256": "0x1af42eb10d1f91ef8b2ec7714ba6be58022b5dbd6caca901b207df4917086593",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8d1771cd1f3cf48feb27226a7bbd3b033bb07d2ebd23b37474a8553048efdfbd",
-				"dweb:/ipfs/QmfDMNBJZuVW25PXWujCUpv6TMiQtwGK6XLjM8HWQ7JgrW"
+				"bzz-raw://067a9952919d28935d0fdff36ed5f2c44cadbf227e26c1e6df9f31a2f33b251e",
+				"dweb:/ipfs/QmdjdYjKrxJ2U6wLueuyoy6sXmkpndfwVtrmUH2d4qmbyP"
 			]
 		}
 	},

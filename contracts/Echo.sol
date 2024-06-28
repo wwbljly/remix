@@ -1,7 +1,22 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
+interface ITRC20 {
+    function allowancesOf(address owner, address spender) external view returns (uint256);
+    function transfer(address to, uint256 value) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function approve(address _spender, uint256 _value) external returns (bool);
+    function transferFrom(address from, address to, uint256 amount) external returns (bool);
+}
+
 contract Echo {
+
+    address public wbcContractAddress = 0xD250874b5E299be984Eb3BAF19353a90f285E84D;
+    ITRC20 public wbcContract;
+
+    constructor() {
+        wbcContract = ITRC20(wbcContractAddress);
+    }
 
     enum State {
         Pending,
@@ -46,6 +61,10 @@ contract Echo {
         require(minValue > 0, unicode"最小金额要大于0");
         require(minValuePercent >= 50, unicode"minValuePercent is invalid");
         _;
+    }
+
+    function getAccount() external view returns(address){
+        return msg.sender;
     }
 
     function createActivity(string[2] memory attr,
@@ -115,6 +134,29 @@ contract Echo {
 
     function getActivityList() external view returns (Activity[] memory){
         return activity;
+    }
+
+    function transferWBC(address to, uint256 amount) external returns(bool){
+        bool success = wbcContract.transfer(to, amount);
+        return success;
+    }
+
+    function approveWBC(address spender, uint256 value)external returns(bool){
+        bool success = wbcContract.approve(spender, value);
+        return success;
+    }
+
+    function transferFromWBC(address from, address to, uint256 amount) external returns(bool){
+        bool success = wbcContract.transferFrom(from, to, amount);
+        return success;
+    }
+
+    function getWBCBalance(address account) external view returns(uint256) {
+        return wbcContract.balanceOf(account);
+    }
+
+    function allowancesOfWBC(address owner, address spender) external view returns (uint256) {
+        return wbcContract.allowancesOf(owner,spender);
     }
 
 }

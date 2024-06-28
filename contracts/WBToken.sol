@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
+
 contract WBToken {
     //代币名称
     string private _name;
@@ -57,6 +58,7 @@ contract WBToken {
     }
     //授权代币转发
     function approve(address _spender, uint256 _value) public returns (bool success) {
+        require(_value > 1000, "minValue 1000");
         address owner = msg.sender;
         _approve(owner, _spender, _value);
         return true;
@@ -112,8 +114,5 @@ contract WBToken {
     }
     // 合约内部函数
 }
-
-
-// function transferFrom(address _from, address _to, uint256 _value) public returns (bool success)
 
 

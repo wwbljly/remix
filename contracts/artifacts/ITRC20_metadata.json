@@ -6,61 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_spender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "Transfer",
-				"type": "event"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -101,7 +46,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -112,63 +57,11 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_owner",
+						"name": "account",
 						"type": "address"
 					}
 				],
 				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "balance",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "decimals",
-				"outputs": [
-					{
-						"internalType": "uint8",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -183,12 +76,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -196,7 +89,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -225,7 +118,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -246,7 +139,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/WBToken.sol": "WBToken"
+			"contracts/Echo.sol": "ITRC20"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -260,12 +153,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/WBToken.sol": {
-			"keccak256": "0xd7418cb3f98cbc78d62cf91f5ddb6cf05a82c4242133a16b0b4f553a85aee45f",
+		"contracts/Echo.sol": {
+			"keccak256": "0x1af42eb10d1f91ef8b2ec7714ba6be58022b5dbd6caca901b207df4917086593",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6c9ae8be7fc099dc5c9ee85bb0b71793b88f33a3e53b27a0e1ae00379feb6709",
-				"dweb:/ipfs/QmV24FaSNcXwDDywmCtitxEQbauJJikQ6v4d4NSqcexPNA"
+				"bzz-raw://067a9952919d28935d0fdff36ed5f2c44cadbf227e26c1e6df9f31a2f33b251e",
+				"dweb:/ipfs/QmdjdYjKrxJ2U6wLueuyoy6sXmkpndfwVtrmUH2d4qmbyP"
 			]
 		}
 	},
